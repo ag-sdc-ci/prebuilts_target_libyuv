@@ -1,0 +1,6 @@
+shadow prebuilt repo: libyuv (target)
+  upstream: external/libyuv
+  api-level: 32 (branch 32-20261016)
+  blobs: org.blisslabs.ag.libyuv-14000004.apex org.blisslabs.ag.libyuv.dev-14000004.apex org.blisslabs.ag.libyuv.doc-14000004.apex 
+  dev-src: extracted dev payload + regenerated root Android.bp (gen_extractive_bp.py)
+  date: 2026-10-16

@@ -30,10 +30,9 @@ cc_library_headers {
         "//apex_available:anyapex",
         "//apex_available:platform",
         "com.android.media.swcodec",
-        "com.android.virt",
     ],
     export_include_dirs: [
-        "dev-src/include",
+        "include",
     ],
 }
 
@@ -45,21 +44,20 @@ cc_prebuilt_library {
     host_supported: true,
     check_elf_files: false,
     export_include_dirs: [
-        "dev-src/include",
+        "include",
     ],
     prefer: true,
     apex_available: [
         "//apex_available:anyapex",
         "//apex_available:platform",
         "com.android.media.swcodec",
-        "com.android.virt",
     ],
     min_sdk_version: "29",
     shared: {
-        srcs: ["src/lib/libyuv.so"],
+        srcs: ["lib64/libyuv.so"],
     },
     static: {
-        srcs: ["dev-src/lib/libyuv.a"],
+        srcs: ["lib64/libyuv.a"],
     },
 }
 
@@ -71,7 +69,7 @@ cc_prebuilt_library_static {
     host_supported: true,
     check_elf_files: false,
     export_include_dirs: [
-        "dev-src/include",
+        "include",
     ],
     prefer: true,
     apex_available: [
@@ -80,5 +78,5 @@ cc_prebuilt_library_static {
         "com.android.media.swcodec",
     ],
     min_sdk_version: "29",
-    srcs: ["dev-src/lib/libyuv.a"],
+    srcs: ["lib64/libyuv.a"],
 }
